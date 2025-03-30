@@ -1,0 +1,16 @@
+# ninja log v6
+2	206	1743359258087426988	CMakeFiles/NatatieSD.dir/Culoar.cpp.o	e10932a89e1c790e
+3	785	1743359258087628237	CMakeFiles/NatatieSD.dir/Pereche.cpp.o	8bc1cdc3d80ec8fd
+2	812	1743359258086524242	CMakeFiles/NatatieSD.dir/Rata.cpp.o	8e1c32bb0faeca85
+8	851	1743359379650745549	CMakeFiles/NatatieSD.dir/Pereche.cpp.o	8bc1cdc3d80ec8fd
+7	865	1743359379649877802	CMakeFiles/NatatieSD.dir/main.cpp.o	140eb9f06c91fe56
+8	868	1743359379650545882	CMakeFiles/NatatieSD.dir/Rata.cpp.o	8e1c32bb0faeca85
+868	1001	1743359380510267205	NatatieSD	ab1f9acf730f998d
+8	789	1743359586810879898	CMakeFiles/NatatieSD.dir/Pereche.cpp.o	8bc1cdc3d80ec8fd
+8	793	1743359586810706982	CMakeFiles/NatatieSD.dir/Culoar.cpp.o	e10932a89e1c790e
+7	801	1743359586809706861	CMakeFiles/NatatieSD.dir/main.cpp.o	140eb9f06c91fe56
+801	921	1743359587604012737	NatatieSD	ab1f9acf730f998d
+7	618	1743359599970747656	CMakeFiles/NatatieSD.dir/main.cpp.o	140eb9f06c91fe56
+618	718	1743359600581742096	NatatieSD	ab1f9acf730f998d
+7	721	1743359626491356247	CMakeFiles/NatatieSD.dir/main.cpp.o	140eb9f06c91fe56
+723	827	1743359627207090727	NatatieSD	ab1f9acf730f998d
