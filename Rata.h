@@ -16,6 +16,7 @@ class Rata {
     int getViteza() const;
     int getRezistenta() const;
 
+
     void setViteza(int);
     void setRezistenta(int);
 

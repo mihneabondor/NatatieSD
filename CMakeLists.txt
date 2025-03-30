@@ -3,4 +3,4 @@ project(NatatieSD)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(NatatieSD main.cpp VectorDinamic.h Rata.cpp Rata.h Culoar.cpp Culoar.h Pereche.cpp Pereche.h)
+add_executable(NatatieSD main.cpp VectorDinamic.h Rata.cpp Rata.h Culoar.cpp Culoar.h Pereche.cpp Pereche.h Service.cpp Service.h)
