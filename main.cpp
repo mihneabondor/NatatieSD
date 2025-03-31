@@ -34,6 +34,6 @@ int main() {
 
     scrieInFisier(culoare,"clasament.txt");
 
-    
+
     return 0;
 }
