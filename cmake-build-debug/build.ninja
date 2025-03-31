@@ -67,8 +67,8 @@ build CMakeFiles/NatatieSD.dir/Culoar.cpp.o: CXX_COMPILER__NatatieSD_unscanned_D
   OBJECT_DIR = CMakeFiles/NatatieSD.dir
   OBJECT_FILE_DIR = CMakeFiles/NatatieSD.dir
 
-build CMakeFiles/NatatieSD.dir/Pereche.cpp.o: CXX_COMPILER__NatatieSD_unscanned_Debug /Users/mihnea/Documents/GitHub/NatatieSD/Pereche.cpp || cmake_object_order_depends_target_NatatieSD
-  DEP_FILE = CMakeFiles/NatatieSD.dir/Pereche.cpp.o.d
+build CMakeFiles/NatatieSD.dir/Service.cpp.o: CXX_COMPILER__NatatieSD_unscanned_Debug /Users/mihnea/Documents/GitHub/NatatieSD/Service.cpp || cmake_object_order_depends_target_NatatieSD
+  DEP_FILE = CMakeFiles/NatatieSD.dir/Service.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/NatatieSD.dir
   OBJECT_FILE_DIR = CMakeFiles/NatatieSD.dir
@@ -81,7 +81,7 @@ build CMakeFiles/NatatieSD.dir/Pereche.cpp.o: CXX_COMPILER__NatatieSD_unscanned_
 #############################################
 # Link the executable NatatieSD
 
-build NatatieSD: CXX_EXECUTABLE_LINKER__NatatieSD_Debug CMakeFiles/NatatieSD.dir/main.cpp.o CMakeFiles/NatatieSD.dir/Rata.cpp.o CMakeFiles/NatatieSD.dir/Culoar.cpp.o CMakeFiles/NatatieSD.dir/Pereche.cpp.o
+build NatatieSD: CXX_EXECUTABLE_LINKER__NatatieSD_Debug CMakeFiles/NatatieSD.dir/main.cpp.o CMakeFiles/NatatieSD.dir/Rata.cpp.o CMakeFiles/NatatieSD.dir/Culoar.cpp.o CMakeFiles/NatatieSD.dir/Service.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=14.6
   OBJECT_DIR = CMakeFiles/NatatieSD.dir
   POST_BUILD = :

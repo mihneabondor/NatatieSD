@@ -1,19 +1,16 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
+#include "Service.h"
 #include "Culoar.h"
 #include "Rata.h"
 #include "VectorDinamic.h"
+#include <cassert>
 
 using namespace std;
 
 int main() {
     ifstream f("/Users/mihnea/Documents/GitHub/NatatieSD/Data/01-natatie.in");
-    if (!f) {
-        cerr << "Error opening file" << endl;
-        return 1;
-    }
 
     int N,M;
     f >> N >> M;
@@ -39,9 +36,14 @@ int main() {
         Rata r(viteza[i], rezistenta[i]);
         rate.add(r);
     }
+    cout << getSolutie(rate, culoare) << endl;
 
-    for (int i = 0; i < culoare.getSize(); i++)
-        cout << culoare[i] << endl;
+    string path = "/Users/mihnea/Documents/GitHub/NatatieSD/Data/01-natatie.out";
+    ifstream f2(path);
+    double sol;
+    f2 >> sol;
+
+    cout << sol << endl;
 
     return 0;
 }
