@@ -89,9 +89,9 @@ double subtask3(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
 bool validare(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare, double timpMax) {
     vector<bool> folosit(culoare.getSize(), false);
     int count = 0;
-    for (const auto &r : rate) {
+    for (int j = 0; j < rate.getSize(); j++) {
         for (int i = 0; i < culoare.getSize(); ++i) {
-            if (!folosit[i] && r.rezistenta >= culoare[i] && getTimp(r, culoare[i]) <= timpMax) {
+            if (!folosit[i] && rate[j].getRezistenta() >= culoare[i].getDistanta() && getTimp(rate[j], culoare[i]) <= timpMax) {
                 folosit[i] = true;
                 count++;
                 break;
@@ -105,9 +105,9 @@ bool validare(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare, double 
 
 double subtask4(VectorDinamic<double>& timpiPosibili, VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     double rez = 1e9;
-    for (double timp : timpiPosibili) {
-        if (validare(rate, culoare, timp)) {
-            rez = timp;
+    for (int i = 0; i < timpiPosibili.getSize(); i++) {
+        if (validare(rate, culoare, timpiPosibili[i])) {
+            rez = timpiPosibili[i];
             break;
         }
     }
