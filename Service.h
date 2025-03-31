@@ -9,5 +9,5 @@
 #include "VectorDinamic.h"
 
 int getConfiguratie(VectorDinamic<Rata>&, VectorDinamic<Culoar>&);
-float getSolutie(VectorDinamic<Rata>&, VectorDinamic<Culoar>&);
+double getSolutie(VectorDinamic<Rata>&, VectorDinamic<Culoar>&);
 #endif //SERVICE_H

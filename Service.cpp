@@ -40,16 +40,16 @@ int getConfiguratie(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     return 4;
 }
 
-float getTimp(Rata r, Culoar c) {
+double getTimp(Rata r, Culoar c) {
     return (2.0 * c.getDistanta()) / r.getViteza();
 }
 
-float subtask1(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+double subtask1(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     return getTimp(rate[0], culoare[culoare.getSize() - 1]);
 }
 
-float subtask2(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
-    float minim = 1e9;
+double subtask2(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+    double minim = 1e9;
     for (int i = 0; i < culoare.getSize(); i++)
         minim = min(minim, getTimp(rate[i], culoare[i]));
     return minim;
@@ -68,13 +68,13 @@ void sortareRate(VectorDinamic<Rata>& rate) {
                 std::swap(rate[i], rate[j]);
 }
 
-float subtask3(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+double subtask3(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     VectorDinamic<Rata> temp = rate;
     sortareRate(temp);
 
-    float timpMax = 0;
+    double timpMax = 0;
     for (int i = 0; i < culoare.getSize(); ++i) {
-        float timp_min = 1e9;
+        double timp_min = 1e9;
         for (int j = 0; j < rate.getSize(); ++j) {
             if (rate[j].getRezistenta() >= culoare[i].getDistanta()) {
                 timp_min = min(timp_min, getTimp(rate[j], culoare[i]));
@@ -86,7 +86,7 @@ float subtask3(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     return timpMax;
 }
 
-bool validare(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare, float timpMax) {
+bool validare(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare, double timpMax) {
     vector<bool> folosit(culoare.getSize(), false);
     int count = 0;
     for (int j = 0; j < rate.getSize(); j++) {
@@ -103,8 +103,8 @@ bool validare(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare, float t
     return false;
 }
 
-float subtask4(VectorDinamic<float>& timpiPosibili, VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
-    float rez = 1e9;
+double subtask4(VectorDinamic<double>& timpiPosibili, VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+    double rez = 1e9;
     for (int i = 0; i < timpiPosibili.getSize(); i++) {
         if (validare(rate, culoare, timpiPosibili[i])) {
             rez = timpiPosibili[i];
@@ -115,7 +115,7 @@ float subtask4(VectorDinamic<float>& timpiPosibili, VectorDinamic<Rata>& rate, V
     return rez;
 }
 
-float subtask5(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+double subtask5(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     int rez = 6000;
     for (int i = 0; i <= 6000; ++i) {
         if (validare(rate, culoare, i)) {
@@ -127,10 +127,10 @@ float subtask5(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     return rez;
 }
 
-float subtask6(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
-    float st = 0, dr = 6000, rez = 6000;
+double subtask6(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+    double st = 0, dr = 6000, rez = 6000;
     while (dr - st > 1e-3) {
-        float mij = (st + dr) / 2.0;
+        double mij = (st + dr) / 2.0;
         if (validare(rate, culoare, mij)) {
             rez = mij;
             dr = mij;
@@ -142,10 +142,10 @@ float subtask6(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     return rez;
 }
 
-float subtask7(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
-    float st = 0, dr = 6000, rez = 6000;
+double subtask7(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+    double st = 0, dr = 6000, rez = 6000;
     while (dr - st > 1e-3) {
-        float mij = (st + dr) / 2.0;
+        double mij = (st + dr) / 2.0;
         if (validare(rate, culoare, mij)) {
             rez = mij;
             dr = mij;
@@ -157,11 +157,11 @@ float subtask7(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     return rez;
 }
 
-float solutieGenerala(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+double solutieGenerala(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     VectorDinamic<Rata> temp = rate;
     sortareRate(temp);
 
-    VectorDinamic<float> timpiPosibili;
+    VectorDinamic<double> timpiPosibili;
     for (int i = 0; i < rate.getSize(); i++)
         for (int j = 0; j < culoare.getSize(); j++)
             timpiPosibili.add(getTimp(rate[i], culoare[j]));
@@ -172,7 +172,7 @@ float solutieGenerala(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare)
     return subtask7(rate, culoare);
 }
 
-float getSolutie(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
+double getSolutie(VectorDinamic<Rata>& rate, VectorDinamic<Culoar>& culoare) {
     if (config1(rate))
         return subtask1(rate, culoare);
     if (config2(rate))
