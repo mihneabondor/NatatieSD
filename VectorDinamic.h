@@ -7,6 +7,7 @@
 #include <ostream>
 
 template <class T>
+
 class VectorDinamic {
     int size;
     T* data;
@@ -22,7 +23,7 @@ public:
 
     T* getData();
     T getElem(int);
-    int getSize();
+    int getSize() ;
 
     void add(T);
     bool del(T);

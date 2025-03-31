@@ -3,6 +3,7 @@
 #include "Culoar.h"
 #include "Rata.h"
 #include "VectorDinamic.h"
+#include "output.h"
 
 using namespace std;
 
@@ -29,5 +30,10 @@ int main() {
 
     for (int i = 0; i < culoare.getSize(); i++)
         cout << culoare[i] << '\n';
+
+
+    scrieInFisier(culoare,"clasament.txt");
+
+    
     return 0;
 }
