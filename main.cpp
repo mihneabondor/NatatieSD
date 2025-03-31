@@ -3,6 +3,7 @@
 #include "Culoar.h"
 #include "Rata.h"
 #include "VectorDinamic.h"
+#include "AlegereRataCuloar.h"
 
 using namespace std;
 
@@ -29,5 +30,10 @@ int main() {
 
     for (int i = 0; i < culoare.getSize(); i++)
         cout << culoare[i] << '\n';
+    double timpMaxim = alegereRataCuloar(rate, culoare);
+
+    // Afișăm rezultatul
+    cout << "Timpul maxim al cursei este: " << timpMaxim << " unitati de timp." << endl;
+
     return 0;
 }

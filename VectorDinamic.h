@@ -16,9 +16,9 @@ class VectorDinamic {
     int partition(int, int);
 
 public:
-    VectorDinamic<T>();
-    VectorDinamic<T>(VectorDinamic<T>&);
-    ~VectorDinamic<T>();
+    VectorDinamic();
+    VectorDinamic(VectorDinamic<T>&);
+    ~VectorDinamic();
 
     T* getData();
     T getElem(int);

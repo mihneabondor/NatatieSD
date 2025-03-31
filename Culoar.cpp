@@ -12,7 +12,7 @@ Culoar::Culoar(int distanta) {
     this->distanta = distanta;
 }
 
-int Culoar::getDistanta() {
+int Culoar::getDistanta() const{
     return distanta;
 }
 

@@ -13,7 +13,7 @@ class Culoar {
     Culoar();
     Culoar(int);
 
-    int getDistanta();
+    int getDistanta() const;
 
     void setDistanta(int);
 
